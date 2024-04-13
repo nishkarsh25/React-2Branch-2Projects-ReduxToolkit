@@ -4,5 +4,8 @@ import { apiSlice } from './Api';
 
 // Configure Redux store
 export const store = configureStore({
- 
+  reducer: {
+    [apiSlice.reducerPath]: apiSlice.reducer,
+  },
+  
 });
