@@ -35,4 +35,5 @@ export const apiSlice = createApi({
   }),
 });
 
-
+// Export the generated hooks for each endpoint
+export const { useGetUsersQuery, useGetUserByIdQuery, useAddUserMutation, useUpdateUserMutation, useDeleteUserMutation } = apiSlice;
