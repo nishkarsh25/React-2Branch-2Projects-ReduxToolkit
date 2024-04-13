@@ -52,5 +52,18 @@ export default function App() {
     { id: 3, name: 'Product C' },
   ];
 
-  
+  return (
+    <div className="container mx-auto px-4 py-8">
+      {renderCart()}
+      <h2 className="text-2xl font-bold mb-4">Product List</h2>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {products.map((product) => (
+          <li key={product.id} className="border p-4 rounded">
+            <span className="block mb-2">{product.name}</span>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={() => addToCartHandler(product)}>Add To Cart</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
