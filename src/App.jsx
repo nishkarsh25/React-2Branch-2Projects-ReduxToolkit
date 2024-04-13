@@ -1,11 +1,4 @@
-import React from 'react'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, updateQuantity, removeFromCart } from './CartSlice';
 
-const App = () => {
-  return (
-    <div className='bg-black'>
-      Hi
-    </div>
-  )
-}
-
-export default App
