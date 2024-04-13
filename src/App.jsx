@@ -24,5 +24,27 @@ export default function App() {
     dispatch(removeFromCart(id));
   };
 
+  const renderCart = () => {
+    return (
+      <>
+        <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
+        <ul>
+          {cartItems.map((item) => (
+            <li key={item.id} className="mb-2 border-b pb-2">
+              <div className="flex justify-between items-center">
+                <span className="text-lg">{item.name} - {item.quantity}</span>
+                <div>
+                  <button className="bg-blue-500 text-white px-2 py-1 mr-1 rounded" onClick={() => updateQuantityHandler(item.id, item.quantity + 1)}>+</button>
+                  <button className="bg-blue-500 text-white px-2 py-1 mr-1 rounded" onClick={() => updateQuantityHandler(item.id, item.quantity - 1)}>-</button>
+                  <button className="bg-red-500 text-white px-2 py-1 rounded" onClick={() => removeFromCartHandler(item.id)}>Remove</button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  };
+
   
 }
