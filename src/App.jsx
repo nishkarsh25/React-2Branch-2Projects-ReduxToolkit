@@ -16,5 +16,9 @@ export default function App() {
     }
   };
 
+  const updateQuantityHandler = (id, quantity) => {
+    dispatch(updateQuantity({ id, quantity }));
+  };
+
   
 }
