@@ -20,5 +20,9 @@ export default function App() {
     dispatch(updateQuantity({ id, quantity }));
   };
 
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
+
   
 }
