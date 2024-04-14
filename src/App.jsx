@@ -7,6 +7,10 @@ function App() {
   const [updateUser] = useUpdateUserMutation();
   const [deleteUser] = useDeleteUserMutation();
 
+  const handleAddUser = async () => {
+    await addUser({ name: 'New User', email: 'newuser@example.com' });
+  };
+
   
 }
 
