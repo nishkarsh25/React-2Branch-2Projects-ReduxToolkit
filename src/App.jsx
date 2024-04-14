@@ -15,6 +15,10 @@ function App() {
     await updateUser({ id,  updatedUser: { name: 'Updated User', email: 'Updateduser@example.com' } });
   };
 
+  const handleDeleteUser = async (id) => {
+    await deleteUser(id);
+  };
+
   
 }
 
