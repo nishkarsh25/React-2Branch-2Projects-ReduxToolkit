@@ -25,10 +25,6 @@ function App() {
     refetch();
   };
 
-  useEffect(() => {
-    // Fetch initial data when the component mounts
-    refetch();
-  }, []);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
