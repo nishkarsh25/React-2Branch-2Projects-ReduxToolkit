@@ -102,6 +102,11 @@ Before running the project, ensure you have the following installed:
    ```bash
    npm install
    ```
+4. Install json-server:
+
+   ```bash
+   npm install json-server
+   ```
 
 ## Usage
 
