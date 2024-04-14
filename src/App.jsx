@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGetUsersQuery, useAddUserMutation, useUpdateUserMutation, useDeleteUserMutation } from './Api';
 
 function App() {
-  const { data: users, error, isLoading } = useGetUsersQuery();
+  const { data: users, error, isLoading, refetch } = useGetUsersQuery();
   const [addUser] = useAddUserMutation();
   const [updateUser] = useUpdateUserMutation();
   const [deleteUser] = useDeleteUserMutation();
 
   const handleAddUser = async () => {
     await addUser({ name: 'New User', email: 'newuser@example.com' });
+    // After adding a user, trigger a re-fetch of data
+    refetch();
   };
 
   const handleUpdateUser = async (id) => {
-    await updateUser({ id,  updatedUser: { name: 'Updated User', email: 'Updateduser@example.com' } });
+    await updateUser({ id, updatedUser: { name: 'Updated User', email: 'Updateduser@example.com' } });
+    // After updating a user, trigger a re-fetch of data
+    refetch();
   };
 
   const handleDeleteUser = async (id) => {
     await deleteUser(id);
+    // After deleting a user, trigger a re-fetch of data
+    refetch();
   };
+
+  useEffect(() => {
+    // Fetch initial data when the component mounts
+    refetch();
+  }, []);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
