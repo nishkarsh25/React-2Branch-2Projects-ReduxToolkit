@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useGetUsersQuery, useAddUserMutation, useUpdateUserMutation, useDeleteUserMutation } from './Api';
 
-const App = () => {
-  return (
-    <div className='bg-black'>
-      Hi
-    </div>
-  )
+function App() {
+  const { data: users, error, isLoading } = useGetUsersQuery();
+  
 }
 
-export default App
+export default App;
