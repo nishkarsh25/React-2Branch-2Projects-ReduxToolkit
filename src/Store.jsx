@@ -1,9 +1,12 @@
+// store.js
 import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './CartSlice';
+import { apiSlice } from './Api';
 
+// Configure Redux store
 export const store = configureStore({
   reducer: {
-    cart: cartReducer,
-    // Add other reducers here if needed
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
 });

@@ -1,0 +1,14 @@
+{
+    "posts": [
+      { "id": "1", "name": "first title", "email": "1@example.com", "views": 100 },
+      { "id": "2", "name": "second title", "email": "2@example.com", "views": 100 }
+    ],
+    "comments": [
+      { "id": "1", "text": "a comment about post 1", "postId": "1" },
+      { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
+    

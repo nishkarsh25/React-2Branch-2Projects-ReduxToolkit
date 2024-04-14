@@ -1,34 +1,46 @@
-# AddToCart Project
+# FetchingDataFromApi Project
 
-Welcome to the AddToCart project README! This project is a simple shopping cart application built with React and Vite. It provides users with the ability to add products to their cart, update the quantity of items in the cart, and remove items from the cart.
-
+The "FetchingDataFromApi Project" is a React project designed to demonstrate fetching data from an API and implementing CRUD operations (Create, Read, Update, Delete) using Redux Toolkit. It showcases how to interact with a backend server to manage user data within a React application.
 
 ## Features
 
-- **Adding Products to Cart**: Users can add products to the cart by clicking the "Add To Cart" button next to each product.
-- **Updating Cart Quantity**: The application allows users to update the quantity of items in the cart using the "+" and "-" buttons.
-- **Removing Items from Cart**: Users can remove items from the cart by clicking the "Remove" button associated with each item.
+- **Fetching Users:** Utilizes the `useGetUsersQuery` hook to fetch a list of users from the API.
+- **Adding Users:** Employs the `useAddUserMutation` hook to add a new user to the API.
+- **Updating Users:** Utilizes the `useUpdateUserMutation` hook to update an existing user in the API.
+- **Deleting Users:** Uses the `useDeleteUserMutation` hook to delete a user from the API.
+
+## Additional Notes
+- **Run the development server in VScode**:
+
+   ```bash
+   npx json-server db.json
+   ```
+- Ensure that the API server is running and accessible at `http://localhost:3000`.
+- Customize and extend the functionality as needed to suit project requirements.
+- This project serves as a foundational example for building more complex applications that interact with backend servers and manage application state efficiently.
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://dulcet-manatee-c53b7f.netlify.app/).
+You can try out the live demo of the app [here](https://lovely-gumdrop-4ddeae.netlify.app/).
 
 ## Folder Structure
 
 ```
-add-to-cart-project/
+FetchingDataFromApi Project
+│   README.md
 │
-├── src/
+├── src
 │   ├── App.jsx
-│   ├── CartSlice.js
+│   ├── Api.js
 │   ├── index.css
-│   └── index.html
+│   ├── index.js
+│   ├── Store.js
+│   └── components
+│       └── ...
 │
-├── package.json
-├── README.md
-├── node_modules/
-├── .gitignore
-└── vite.config.js
+└── node_modules
+    └── ...
+
 
 ```
 
@@ -36,16 +48,29 @@ add-to-cart-project/
 ## Screenshots
 
 <!-- Include screenshots or GIFs of your app here to give users a visual representation of what your app looks like. -->
-<img src="https://github.com/nishkarsh25/React-2Branch-2Projects-ReduxToolkit/blob/AddToCartProject/Screenshots/ss1.png" alt="Screenshot 1" width="1000"> 
+<img src="https://github.com/nishkarsh25/React-2Branch-2Projects-ReduxToolkit/blob/FetchingDataFromApiProject/Screenshots/ss1.png" alt="Screenshot 1" width="1000"> 
+
+## GIF's
+
+<!-- Include screenshots or GIFs of your app here to give users a visual representation of what your app looks like. -->
+<img src="https://github.com/nishkarsh25/React-2Branch-2Projects-ReduxToolkit/blob/FetchingDataFromApiProject/Screenshots/ss2.gif" alt="Screenshot 1" width="1000"> 
+
 
 
 ## Technologies Used
 
-- **React**: A JavaScript library for building user interfaces.
-- **Redux Toolkit**: A package that simplifies Redux logic, including actions, reducers, and store configuration.
-- **Vite**: A fast build tool for modern web development, providing lightning-fast cold server start and instant hot module replacement.
-- **Tailwind CSS**: A utility-first CSS framework that provides a set of pre-built classes to style your application. Tailwind CSS allows for rapid development and consistent styling.
+- **React:** A JavaScript library for building user interfaces.
+- **Redux Toolkit:** An opinionated toolset for efficient Redux development, used for state management.
+- **React Query:** A data-fetching library for React applications, providing caching, pagination, and real-time updates.
+- **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
 
+## Project Structure
+- **App.jsx:** The primary component responsible for rendering the user interface and handling user interactions.
+- **Api.js:** Defines API endpoints using Redux Toolkit's `createApi` function, enabling communication with the backend server.
+- **index.css:** Contains global styles for the application, including font styles, colors, and layout configurations.
+- **index.js:** The entry point of the application, rendering the `App` component into the DOM.
+- **Store.js:** Configures the Redux store with middleware and reducers, integrating the API slice into the store.
+- **components:** Contains reusable components used throughout the application for modularity and scalability.
 
 
 ## Getting Started
@@ -77,6 +102,11 @@ Before running the project, ensure you have the following installed:
    ```bash
    npm install
    ```
+4. Install json-server:
+
+   ```bash
+   npm install json-server
+   ```
 
 ## Usage
 
@@ -85,18 +115,20 @@ Before running the project, ensure you have the following installed:
    ```bash
    npm run dev
    ```
-2. **Open your browser** and navigate to http://localhost:5173 to view the app.
+2. **Run the json server**:
+
+   ```bash
+   npx json-server db.json
+   ```
+   
+3. **Open your browser** and navigate to http://localhost:5173 to view the app.
+4. **Open your browser** and navigate to http://localhost:3000 to view the json server.
 
 ## How to Use
 
-1. **View the Application**: Open your preferred web browser and navigate to [http://localhost:5173](http://localhost:5173) to view the application.
-
-2. **Adding Products to Cart**: On the product list page, you'll see a list of products. Click the "Add To Cart" button next to any product to add it to your shopping cart.
-
-3. **Updating Cart Quantity**: In the shopping cart, you can adjust the quantity of items using the "+" and "-" buttons next to each item.
-
-4. **Removing Items from Cart**: If you want to remove an item from your cart, click the "Remove" button associated with that item.
-
+- **Adding Products to the Cart**: Browse the list of available products and click the "Add To Cart" button next to a product to add it to your shopping cart.
+- **Updating Quantities**: In the shopping cart section, use the "+" and "-" buttons to increase or decrease the quantity of items.
+- **Removing Items**: To remove an item from your shopping cart, click the "Remove" button next to the item.
 
 
 ## React + Vite
