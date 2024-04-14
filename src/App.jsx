@@ -11,6 +11,10 @@ function App() {
     await addUser({ name: 'New User', email: 'newuser@example.com' });
   };
 
+  const handleUpdateUser = async (id) => {
+    await updateUser({ id,  updatedUser: { name: 'Updated User', email: 'Updateduser@example.com' } });
+  };
+
   
 }
 
