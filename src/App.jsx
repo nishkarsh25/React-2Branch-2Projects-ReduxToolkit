@@ -3,6 +3,7 @@ import { useGetUsersQuery, useAddUserMutation, useUpdateUserMutation, useDeleteU
 
 function App() {
   const { data: users, error, isLoading } = useGetUsersQuery();
+  const [addUser] = useAddUserMutation();
   
 }
 
