@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 // Create the API slice
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://react-2branch-2projects-reduxtoolkit-1.onrender.com/' }),
   endpoints: (builder) => ({
     getUsers: builder.query({
       query: () => '/posts',
