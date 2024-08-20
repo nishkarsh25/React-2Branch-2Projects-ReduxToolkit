@@ -11,7 +11,7 @@ Welcome to the AddToCart project README! This project is a simple shopping cart 
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://dulcet-manatee-c53b7f.netlify.app/).
+You can try out the live demo of the app [here](https://react-2branch-2projects-reduxtoolkit-2.onrender.com/).
 
 ## Folder Structure
 
