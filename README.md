@@ -21,7 +21,7 @@ The "FetchingDataFromApi Project" is a React project designed to demonstrate fet
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://lovely-gumdrop-4ddeae.netlify.app/).
+You can try out the live demo of the app [here](https://react-2branch-2projects-reduxtoolkit.onrender.com).
 
 ## Folder Structure
 
